@@ -1,6 +1,8 @@
 import React, { forwardRef, useState } from 'react'
 import styled from 'styled-components'
 
+import CallAction from '../../../doenet/src/Viewer/renderers/callAction'
+
 import { UIProps } from '..'
 
 interface IProps {
@@ -18,7 +20,7 @@ export const BlockQuote = forwardRef((props: IProps, ref: any) => {
     // console.log(newProps)
   }
   return (
-    <StyledBlockQuote className={className} ref={ref}/>
+    <CallAction className={className} ref={ref}/>
   )
 })
 

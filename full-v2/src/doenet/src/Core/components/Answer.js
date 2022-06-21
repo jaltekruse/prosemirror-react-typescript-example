@@ -2,8 +2,6 @@ import InlineComponent from './abstract/InlineComponent';
 import { deepCompare } from '../utils/deepFunctions';
 import { renameStateVariable } from '../utils/stateVariables';
 import { serializedComponentsReplacer, serializedComponentsReviver } from '../utils/serializedStateProcessing';
-import sha1 from 'crypto-js/sha1';
-import Base64 from 'crypto-js/enc-base64';
 import stringify from 'json-stringify-deterministic';
 
 export default class Answer extends InlineComponent {
@@ -1070,7 +1068,7 @@ export default class Answer extends InlineComponent {
         );
         return {
           setValue: {
-            creditAchievedDependencies: Base64.stringify(sha1(stringified))
+            creditAchievedDependencies: btoa((stringified))
           }
         }
       },

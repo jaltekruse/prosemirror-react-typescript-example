@@ -2,6 +2,7 @@ import typescript from 'rollup-plugin-typescript2'
 import postcss from 'rollup-plugin-postcss'
 import alias from '@rollup/plugin-alias'
 import ttypescript from 'ttypescript'
+import babel from '@rollup/plugin-babel'
 
 import path from 'path'
 
@@ -31,6 +32,10 @@ export default {
         { find: '@extensions', replacement: path.resolve(__dirname, 'src/extensions') },
         { find: '@react', replacement: path.resolve(__dirname, 'src/react') },
       ]
+    }),
+    babel({
+        exclude: 'node_modules/**',
+        presets: ['@babel/env', '@babel/preset-react']
     }),
     typescript({
       typescript: ttypescript
