@@ -15,6 +15,8 @@ import { DesktopLayout } from './DesktopLayout'
 import { Stores } from '../../stores'
 import { DocumentStore } from '../../stores/DocumentStore'
 
+export { EditorSimple } from '@pm-react-example/full-v2'
+
 interface IProps {
   className?: string
   userId?: string

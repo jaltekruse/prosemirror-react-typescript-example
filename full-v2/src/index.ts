@@ -11,6 +11,7 @@ export {
 export type { EditorContext, IProviders } from '@context'
 
 export { Editor } from '@core'
+export { EditorSimple } from '@core'
 
 export {
   Base,

@@ -1,4 +1,5 @@
 export { Editor } from './Editor'
+export { EditorSimple } from './Editor'
 export type { JSONEditorState } from './types/editor-view' 
 
 export { PluginKey } from './pm/plugin'
