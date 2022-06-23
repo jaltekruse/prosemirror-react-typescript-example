@@ -12,6 +12,9 @@ import './index.css'
 
 export const stores = new Stores()
 
+export { EditorSimple } from './components/editor/Editor'
+
+
 confMobx()
 
 render(
