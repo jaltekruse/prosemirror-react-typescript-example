@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { PageHeader } from '../components/PageHeader'
 import { CollabInfo } from '../components/CollabInfo'
 import { DocumentBrowser } from '../components/DocumentBrowser'
-import { EditorSimple } from '../components/editor/Editor'
+import { Editor } from '../components/editor/Editor'
 
 interface IProps {
   className?: string
@@ -17,7 +17,7 @@ export function FrontPage(props: IProps) {
       <PageHeader />
       <CollabInfo />
       <DocumentBrowser />
-      <EditorSimple />
+      <Editor />
     </Container>
   )
 }
