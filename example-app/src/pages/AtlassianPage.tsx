@@ -1,8 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import { Editor } from '@pm-react-example/atlassian'
-
 import { PageHeader } from '../components/PageHeader'
 
 interface IProps {
@@ -14,7 +12,7 @@ export function AtlassianPage(props: IProps) {
   return (
     <Container className={className}>
       <PageHeader />
-      <Editor performanceTracking/>
+      <span>Removed because of NPM issues. </span>
     </Container>
   )
 }
