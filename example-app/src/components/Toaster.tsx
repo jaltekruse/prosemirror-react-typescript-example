@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useLayoutEffect, useState } from 'react'
+import React, { memo, useLayoutEffect, useState } from 'react'
 import { inject, observer } from 'mobx-react'
 import styled from 'styled-components'
 import { FiAlertCircle, FiAlertTriangle, FiCheckCircle, FiXOctagon, FiX } from 'react-icons/fi'
@@ -12,15 +12,16 @@ interface IToastProps {
   removeToast: (id: number) => void
 }
 const Toast = memo((props: IToastProps) => {
-  const { className, toast, removeToast } = props
+  const { className, toast } = props
   const [inProgress, setInProgress] = useState(false)
-  const remove = useCallback(() => removeToast(toast.id), [toast])
+  //const remove = useCallback(() => removeToast(toast.id), [toast])
   useLayoutEffect(() => {
     const id = setTimeout(() => setInProgress(true), 0)
     return () => clearTimeout(id)
   }, [])
   useLayoutEffect(() => {
-    const id = setTimeout(remove, toast.duration)
+    //const id = setTimeout(remove, toast.duration)
+    const id = 1234
     return () => clearTimeout(id)
   }, [])
   return (
@@ -28,7 +29,7 @@ const Toast = memo((props: IToastProps) => {
       <ToastBody type={toast.type}>
         <SvgWrapper className="type-icon">{ getTypeIcon(toast.type) }</SvgWrapper>
         <p className="message">{ toast.message }</p>
-        <SvgAction className="close-icon"><FiX size={24} onClick={remove}/></SvgAction>
+        <SvgAction className="close-icon"><FiX size={24} /></SvgAction>
       </ToastBody>
       <Progress type={toast.type} duration={toast.duration} inProgress={inProgress}/>
     </ToastItem>

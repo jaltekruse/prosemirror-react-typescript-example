@@ -26,7 +26,7 @@ export function Toolbar(props: IProps) {
     return () => {
       pluginsProvider.unsubscribe(BaseExtension.pluginKey, onBasePluginChange)
     }
-  }, [])
+  }, [pluginsProvider ])
 
   function onBasePluginChange(newPluginState: BaseState) {
     setCurrentMarks(newPluginState.activeMarks)
