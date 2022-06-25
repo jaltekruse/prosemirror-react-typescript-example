@@ -3,8 +3,6 @@
   "version": "0.1.0",
   "homepage": "https://teemukoivisto.github.io/prosemirror-react-typescript-example/",
   "dependencies": {
-    "@pm-react-example/atlassian": "*",
-    "@pm-react-example/full": "*",
     "@pm-react-example/full-v2": "*",
     "@pm-react-example/minimal": "*",
     "@pm-react-example/shared": "*",
