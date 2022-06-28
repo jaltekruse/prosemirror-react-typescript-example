@@ -45,6 +45,7 @@
     "styled-components": ">=5.3.1"
   },
   "dependencies": {
+           "@toast-ui/react-image-editor": "github:jaltekruse/toast-ui.react-image-editor#67904f2b45de85b1d3a4680fff00fd737d987858",
     "prosemirror-collab": "^1.2.2",
     "prosemirror-commands": "^1.1.10",
     "prosemirror-dev-tools": "^3.1.0",

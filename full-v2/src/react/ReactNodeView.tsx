@@ -141,9 +141,14 @@ export class ReactNodeView<P = ReactComponentProps, A extends Attrs = {}> implem
    * @param node the element the ref points to inside the component.
    */
   handleRef = (node: HTMLElement | null) => {
+      console.log(node);
+      try {
     if (node && this.contentDOM && !node.contains(this.contentDOM)) {
       node.appendChild(this.contentDOM)
     }
+      } catch(e) {
+          console.log(e);
+      }
   }
 
   render(

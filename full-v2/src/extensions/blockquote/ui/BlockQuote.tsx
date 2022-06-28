@@ -1,5 +1,6 @@
 import React, { forwardRef, useState } from 'react'
 import styled from 'styled-components'
+import ImageEditor from '@toast-ui/react-image-editor' 
 
 import { UIProps } from '..'
 
@@ -18,7 +19,21 @@ export const BlockQuote = forwardRef((props: IProps, ref: any) => {
     // console.log(newProps)
   }
   return (
-    <StyledBlockQuote className={className} ref={ref}/>
+    <ImageEditor 
+      includeUI={{
+          loadImage: {
+            path: 'https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg',
+            name: 'SampleImage',
+          },
+          menu: ['shape', 'filter'],
+          initMenu: 'filter',
+          uiSize: {
+            width: '1000px',
+            height: '700px',
+          },
+          menuBarPosition: 'bottom',
+    }}
+    ref={ref}/>
   )
 })
 
