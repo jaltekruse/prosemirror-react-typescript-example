@@ -8,6 +8,7 @@ export const toggleCode = makeKeyMapWithCommon('Code', 'Mod-Shift-m');
 export const setNormalText = makeKeyMapWithCommon('Normal text', 'Mod-Alt-0');
 export const toggleHeading1 = makeKeyMapWithCommon('Heading 1', 'Mod-Alt-1');
 export const toggleBlockQuote = makeKeyMapWithCommon('Quote', 'Ctrl-Alt-b');
+export const toggleGraph = makeKeyMapWithCommon('Quote', 'Ctrl-Alt-g');
 export const insertNewLine = makeKeyMapWithCommon(
   'Insert new line',
   'Shift-Enter',

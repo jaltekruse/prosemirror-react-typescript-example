@@ -5,7 +5,7 @@ import { EditorState } from 'prosemirror-state'
 import applyDevTools from 'prosemirror-dev-tools'
 
 import {
-  Editor as FullEditor, Base, BlockQuote, Collab,
+  Editor as FullEditor, Base, BlockQuote, Graph, Collab,
   ReactEditorContext, PortalRenderer,
   EditorContext, APIProvider, createDefaultProviders
 } from '@pm-react-example/full-v2'
@@ -72,6 +72,7 @@ export const Editor = inject((stores: Stores) => ({
         >
           <Base/>
           <BlockQuote/>
+          <Graph/>
           <Collab {...collab} />
         </FullEditor>
       </DesktopLayout>

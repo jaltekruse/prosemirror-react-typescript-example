@@ -17,6 +17,8 @@ export {
   BaseExtension,
   BlockQuote,
   BlockQuoteExtension,
+  Graph,
+  GraphExtension,
   Collab,
   CollabExtension,
   Extension,
@@ -27,6 +29,7 @@ export {
 export type {
   BaseState,
   BlockQuoteState,
+  GraphState,
 } from '@extensions'
 
 export { PortalRenderer } from '@react'
