@@ -1,6 +1,6 @@
 import { NodeSpec } from 'prosemirror-model'
 
-export const blockquote: NodeSpec = {
+export const graph: NodeSpec = {
   content: 'paragraph+',
   group: 'block',
   defining: true,
@@ -8,8 +8,8 @@ export const blockquote: NodeSpec = {
   attrs: {
     class: { default: '' },
   },
-  parseDOM: [{ tag: 'blockquote' }],
+  parseDOM: [{ tag: 'graph' }],
   toDOM() {
-    return ['blockquote', 0]
+    return ['graph', 0]
   },
 }

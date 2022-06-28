@@ -10,7 +10,7 @@ export interface IBlockQuoteAttrs {
   size: number
 }
 
-export { blockquotePluginKey } from './pm-plugins/state'
+export { graphPluginKey } from './pm-plugins/state'
 export type { BlockQuoteState } from './pm-plugins/state'
 export { BlockQuoteExtension, blockQuoteSchema } from './BlockQuoteExtension'
 export type { BlockQuoteExtensionProps } from './BlockQuoteExtension'

@@ -6,7 +6,7 @@ import { blockQuoteNodeView } from '../nodeviews/BlockQuoteView'
 import { findBlockQuote } from '../pm-utils/findBlockQuote'
 
 import { BlockQuoteExtensionProps } from '..'
-import { BlockQuoteState, blockquotePluginKey } from './state'
+import { BlockQuoteState, graphPluginKey } from './state'
 
 export function blockQuotePluginFactory(
   ctx: EditorContext,
@@ -31,7 +31,7 @@ export function blockQuotePluginFactory(
           const blockQuoteActive = !!findBlockQuote(newState, newState.selection)
           // const blockQuoteDisabled = !(
           //   blockQuoteActive ||
-          //   isWrappingPossible(newState.schema.blockquote, newState)
+          //   isWrappingPossible(newState.schema.graph, newState)
           // )
 
           if (
@@ -42,7 +42,7 @@ export function blockQuotePluginFactory(
               blockQuoteActive,
               // blockQuoteDisabled,
             }
-            pluginsProvider.publish(blockquotePluginKey, nextPluginState)
+            pluginsProvider.publish(graphPluginKey, nextPluginState)
             return nextPluginState
           }
         }
@@ -50,10 +50,10 @@ export function blockQuotePluginFactory(
         return pluginState
       },
     },
-    key: blockquotePluginKey,
+    key: graphPluginKey,
     props: {
       nodeViews: {
-        blockquote: blockQuoteNodeView(ctx, props),
+        graph: blockQuoteNodeView(ctx, props),
       },
     },
   })

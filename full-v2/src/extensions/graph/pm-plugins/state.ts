@@ -7,10 +7,10 @@ export interface BlockQuoteState {
   // blockQuoteDisabled: boolean
 }
 
-export const blockquotePluginKey = new PluginKey('blockQuotePlugin')
+export const graphPluginKey = new PluginKey('blockQuotePlugin')
 
 export const getPluginState = (state: EditorState): BlockQuoteState =>
-  blockquotePluginKey.getState(state);
+  graphPluginKey.getState(state);
 
 export const setPluginState = (stateProps: Object) => (
   state: EditorState,
@@ -18,7 +18,7 @@ export const setPluginState = (stateProps: Object) => (
 ): boolean => {
   const pluginState = getPluginState(state);
   dispatch(
-    state.tr.setMeta(blockquotePluginKey, {
+    state.tr.setMeta(graphPluginKey, {
       ...pluginState,
       ...stateProps,
     }),

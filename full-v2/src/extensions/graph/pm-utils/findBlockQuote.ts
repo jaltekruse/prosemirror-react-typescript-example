@@ -8,9 +8,9 @@ export function findBlockQuote(
   state: EditorState,
   selection?: Selection<any> | null,
 ) {
-  const { blockquote } = state.schema.nodes
+  const { graph } = state.schema.nodes
   return (
-    findSelectedNodeOfType(blockquote)(selection || state.selection) ||
-    findParentNodeOfType(blockquote)(selection || state.selection)
+    findSelectedNodeOfType(graph)(selection || state.selection) ||
+    findParentNodeOfType(graph)(selection || state.selection)
   )
 }

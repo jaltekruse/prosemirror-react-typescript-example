@@ -5,8 +5,8 @@ export const createNewBlockQuote = (): Command => (
   dispatch,
 ): boolean => {
   const {$from, $to} = state.selection
-  const blockquote = state.schema.nodes.graph;
-  const empty = blockquote.createAndFill()
+  const graph = state.schema.nodes.graph;
+  const empty = graph.createAndFill()
   const endOfBlock = $from.end()
   if (empty && dispatch) {
     const tr = state.tr.insert(endOfBlock + 1, empty)

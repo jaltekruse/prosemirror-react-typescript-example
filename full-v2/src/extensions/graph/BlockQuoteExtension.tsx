@@ -1,19 +1,19 @@
 import { EditorState } from 'prosemirror-state'
 import { Extension, IExtensionSchema } from '../Extension'
 
-import { blockquote } from './nodes/blockquote'
+import { graph } from './nodes/blockquote'
 import { blockQuotePluginFactory } from './pm-plugins/main'
-import { blockquotePluginKey, getPluginState } from './pm-plugins/state'
+import { graphPluginKey, getPluginState } from './pm-plugins/state'
 import { keymapPlugin } from './pm-plugins/keymap'
 
 export interface BlockQuoteExtensionProps {}
 export const blockQuoteSchema: IExtensionSchema = {
-  nodes: { blockquote: blockquote }
+  nodes: { graph: graph }
 }
 export class BlockQuoteExtension extends Extension<BlockQuoteExtensionProps> {
 
   get name() {
-    return 'blockquote' as const
+    return 'graph' as const
   }
 
   get schema() {
@@ -21,7 +21,7 @@ export class BlockQuoteExtension extends Extension<BlockQuoteExtensionProps> {
   }
 
   static get pluginKey() {
-    return blockquotePluginKey
+    return graphPluginKey
   }
 
   static getPluginState(state: EditorState) {
@@ -34,7 +34,7 @@ export class BlockQuoteExtension extends Extension<BlockQuoteExtensionProps> {
         name: 'graph',
         plugin: () => blockQuotePluginFactory(this.ctx, this.props),
       },
-      { name: 'blockquoteKeyMap', plugin: () => keymapPlugin() },
+      { name: 'graphKeyMap', plugin: () => keymapPlugin() },
     ]
   }
 }
