@@ -13,8 +13,8 @@ export const Collab = createReactExtension<CollabExtensionProps>(CollabExtension
 
 export { BaseExtension } from './base'
 export type { BaseState } from './base'
-export { BlockQuoteExtension } from './blockquote'
-export type { BlockQuoteState } from './blockquote'
+export { BlockQuoteExtension } from './image-editor'
+export type { BlockQuoteState } from './image-editor'
 export { CollabExtension } from './collab'
 export type { CollabState } from './collab'
 

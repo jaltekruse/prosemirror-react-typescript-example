@@ -52,6 +52,18 @@ export function Toolbar(props: IProps) {
           icon={<MdFormatItalic size={24}/>}
           onClick={toggleItalics}
         />
+        <MarkButton
+          active={currentMarks.includes('em')}
+          name="italics"
+          icon={<span>Image Editor </span>}
+          onClick={toggleItalics}
+        />
+        <MarkButton
+          active={currentMarks.includes('em')}
+          name="italics"
+          icon={<span>JSX Graph</span>}
+          onClick={toggleItalics}
+        />
       </TopRow>
     </Container>
   )
